@@ -27,7 +27,6 @@ module.exports = {
 
     addNewProduct:async(req,res,next)=>{
         // (async () => {
-            console.log("masuk 1")
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
             await page.goto(req.body.productUrl)
@@ -60,8 +59,7 @@ module.exports = {
             var month = date.getMonth()
             var year = date.getFullYear()
             var clock = hour +"." + mins + ', ' + day + '-' + month + '-' + year
-            
-            console.log('masuk 2')
+
             let productData = {
                 productName: getProductName,
                 productDescription: productDescription,
@@ -72,7 +70,7 @@ module.exports = {
                 productUrl: req.body.productUrl,
                 picUrl: getPicUrl
             }
-            console.log('masuk 4')
+
 
             await browser.close();
             
@@ -83,11 +81,9 @@ module.exports = {
 
         newProduct.save()
         .then(product=>{
-            console.log("berhasil ga")
             res.status(200).json(product)
         })
         .catch(err=>{
-            console.log("error ga",err)
             console.log(err)
             res.status(400).send(err)
         })
@@ -105,7 +101,6 @@ module.exports = {
     },
 
     updateProduct: async (req,res,next)=>{
-        console.log("masuk ga")
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
         await page.goto(req.body.productUrl)
@@ -137,7 +132,6 @@ module.exports = {
 
         let newProductPrice = req.body.productPrice
         newProductPrice.push(newProductPriceData)
-        console.log("KEGANTI GA PRODUCT PRICENYA",newProductPrice)
 
         let newProductData = {
             productName: req.body.productName,
@@ -152,7 +146,6 @@ module.exports = {
             res.status(200).json(product)
         })
         .catch(err=>{
-            console.log("erorrnya apa")
             res.status(400).send(err)
         })
     }
