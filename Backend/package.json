@@ -16,8 +16,6 @@
     "mocha": "^5.2.0",
     "mongoose": "^5.3.13",
     "morgan": "~1.9.0",
-    "node-phantom": "^0.2.5",
-    "phantom": "^6.0.3",
     "puppeteer": "^1.10.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
