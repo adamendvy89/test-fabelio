@@ -16,11 +16,11 @@ Monitoring certain product prices
 | /product/update/:id  | update existing product but adding new updated prices  |
 
 ### Environment
-NodeJs__
-ExpressJs__
-Mongodb with ODM mongoose__
-Puppeteer - web scraping__
-Cheerio - web scraping__
+NodeJs <br>
+ExpressJs_ <br>
+Mongodb with ODM mongoose <br>
+Puppeteer - web scraping <br>
+Cheerio - web scraping <br>
 VueJs - frontend framework
 
 ## Author
