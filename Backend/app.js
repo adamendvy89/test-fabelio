@@ -12,8 +12,8 @@ var productRouter = require ('./routes/product')
 
 var app = express();
 app.use(cors())
-// mongoose.connect("mongodb://127.0.0.1:27017/webScraping",{useNewUrlParser:true})
-mongoose.connect("mongodb://fabeliouser:fabeliouser123@ds111244.mlab.com:11244/fabelio",{useNewUrlParser:true})
+mongoose.connect("mongodb://127.0.0.1:27017/webScraping",{useNewUrlParser:true})
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
