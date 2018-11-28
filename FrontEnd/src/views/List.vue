@@ -1,34 +1,24 @@
 <template>
     <div class="product-list">
-        <table class="table container is-striped  is-fullwidth">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Price</th>
-                    <th>Name</th>
-                    <th>Link</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(product, index) in products" :key="index">
-                    <td><b>{{index+1}}</b></td>
-                    <td>{{product.productPrice[product.productPrice.length -1].price}}</td>
-                    <td>{{product.productName}}</td>
-                    <td @click="toDetail(product._id)"><a>{{product.productUrl}}</a></td>
-                    <td>{{product.productDescription}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="content">
+            <Post v-for="(product, index) in products" :key="index" :product='product' :index="index" class="post"></Post>
+        </div>
     </div>
 </template>
 
 <script>
+
+import Post from '@/components/Post.vue'
+
+
 export default {
     data:function(){
         return{
             products:[]
         }
+    },
+    components:{
+        Post
     },
     created:function(){
         axios.get("http://localhost:5000/product")
@@ -52,6 +42,15 @@ export default {
 .table{
     margin-top:30px;
     margin-bottom: 60px;
+}
+
+.post{
+    margin-left: 150px;
+    margin-right: 150px;
+    
+}
+.content{
+    margin-bottom: 50px !important
 }
 
 </style>

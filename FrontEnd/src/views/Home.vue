@@ -45,9 +45,12 @@ export default {
       .then(({data})=>{
         console.log("product result",data)
         this.$router.push({ path: `/detail/${data._id}`})
+        
       })
       .catch(err=>{
+        this.loadingBar = false
         console.log("error di post product", err)
+        alert('Produk ini sudah ada')
       })
     }
   },
