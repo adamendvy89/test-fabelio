@@ -9,7 +9,7 @@ Monitoring certain product prices
 # List API
 
 | API  | HTTP | Purpose |
-| ------------- | ------------ | | ------------- |
+| ------------- | ------------ | ------------- |
 | /product  | GET | get all products list  |
 | /product/new | POST | add new product with product url  |
 | /product/:id | GET | get product by product id  |
@@ -25,16 +25,22 @@ Mongodb with ODM mongoose <br>
 VueJs 
 
 
-##Setup
+### Setup
 
 **Backend** <br>
+```
 $ npm install <br>
 $ npm start <br>
+```
 Run on localhost:8000<br>
 
+
 **Frontend**  <br>
-$ npm run serve <br>
-Run on localhost:8080 <br>
+```
+$ npm run serve
+```
+Run on localhost:8080 
+
 
 
 ### Dependencies 
