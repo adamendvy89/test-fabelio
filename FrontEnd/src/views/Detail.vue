@@ -104,7 +104,7 @@ export default {
     },
     methods:{
         getDetail(){
-            axios.get(`http://localhost:5000/product/${this.$route.params.id}`)
+            axios.get(`http://test-fabelio.appspot.com/product/${this.$route.params.id}`)
             .then(({data})=>{
                 this.productPrice = data.productPrice
                 this.productImage = data.picUrl
@@ -119,7 +119,7 @@ export default {
         getComment(){
             var param = this.$route.params.id
             console.log(param)
-            axios.get(`http://localhost:5000/comment/${param}`)
+            axios.get(`http://test-fabelio.appspot.com/comment/${param}`)
                 .then(({data})=>{
                    this.allComments=data 
                    console.log("ALL COMMENTS GET COMMENTS",this.allComments)
@@ -130,7 +130,7 @@ export default {
         },
         addComment(){
             console.log(this.$route.params.id, this.con)
-            axios.post("http://localhost:5000/comment/new",{
+            axios.post("http://test-fabelio.appspot.com/comment/new",{
                 productId:this.$route.params.id,
                 content:this.comment_content,
                 title:this.comment_title
@@ -151,28 +151,6 @@ export default {
         closeModal(){
             $(".modal").removeClass("is-active")
         },
-
-        // fetchNewPrice(){
-        //     this.loadingBar = true
-        //     let newProductUpdate = {
-        //         productPrice : this.productPrice,
-        //         picUrl : this.productImage,
-        //         productName : this.productName,
-        //         productDescription : this.productDescription,
-        //         productUrl: this.productLink
-        //     }
-            
-        //     console.log(newProductUpdate)
-        //     axios.post(`http://localhost:5000/product/change/${this.$route.params.id}`,newProductUpdate)
-        //     .then(({data})=>{
-        //         this.loadingBar = false
-        //         this.getDetail()
-        //         console.log(data)
-        //     })
-        //     .catch(err=>{
-        //         console.log(err)
-        //     })
-        // }
     }
 }
 </script>

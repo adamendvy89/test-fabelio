@@ -41,7 +41,7 @@ export default {
   methods:{
     submitLink(){
       this.loadingBar = true
-      axios.post('http://localhost:5000/product/new',{ productUrl: this.productLink })
+      axios.post('http://test-fabelio.appspot.com/product/new',{ productUrl: this.productLink })
       .then(({data})=>{
         console.log("product result",data)
         this.$router.push({ path: `/detail/${data._id}`})
