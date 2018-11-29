@@ -21,7 +21,7 @@ export default {
         Post
     },
     created:function(){
-        axios.get("https://fabelio-test.appspot.com/product")
+        axios.get("https://localhost:8000/product")
         .then(({data})=>{
             this.products = data
         })

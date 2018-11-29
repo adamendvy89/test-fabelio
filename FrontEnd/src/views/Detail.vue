@@ -104,7 +104,7 @@ export default {
     },
     methods:{
         getDetail(){
-            axios.get(`https://fabelio-test.appspot.com/product/${this.$route.params.id}`)
+            axios.get(`https://localhost:8000/product/${this.$route.params.id}`)
             .then(({data})=>{
                 this.productPrice = data.productPrice
                 this.productImage = data.picUrl
@@ -119,7 +119,7 @@ export default {
         getComment(){
             var param = this.$route.params.id
             console.log(param)
-            axios.get(`https://fabelio-test.appspot.com/comment/${param}`)
+            axios.get(`https://localhost:8000/comment/${param}`)
                 .then(({data})=>{
                    this.allComments=data 
                    console.log("ALL COMMENTS GET COMMENTS",this.allComments)
@@ -130,7 +130,7 @@ export default {
         },
         addComment(){
             console.log(this.$route.params.id, this.con)
-            axios.post("https://fabelio-test.appspot.com/comment/new",{
+            axios.post("https://localhost:8000/comment/new",{
                 productId:this.$route.params.id,
                 content:this.comment_content,
                 title:this.comment_title
