@@ -41,7 +41,7 @@ export default {
   methods:{
     submitLink(){
       this.loadingBar = true
-      axios.post('http://test-fabelio.appspot.com/product/new',{ productUrl: this.productLink })
+      axios.post('https://fabelio-test.appspot.com/product/new',{ productUrl: this.productLink })
       .then(({data})=>{
         console.log("product result",data)
         this.$router.push({ path: `/detail/${data._id}`})
@@ -49,7 +49,6 @@ export default {
       })
       .catch(err=>{
         this.loadingBar = false
-        console.log("error di post product", err)
         alert('Produk ini sudah ada')
       })
     }

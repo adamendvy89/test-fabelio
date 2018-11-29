@@ -34,7 +34,7 @@ export default {
             console.log("KETRIGGER GA")
             let params = this.$route.params.id
             console.log("params",params)
-            axios.delete(`http://test-fabelio.appspot.com/comment/delete/${commentid}`)
+            axios.delete(`https://fabelio-test.appspot.com/comment/delete/${commentid}`)
             .then(({data})=>{
                 console.log("DATA DELETE COMMENT",data)
                 window.location.reload()

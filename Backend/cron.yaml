@@ -1,4 +1,0 @@
-cron:
-    - description: "update price hourly"
-      url: /cron
-      schedule: every 1 mins
