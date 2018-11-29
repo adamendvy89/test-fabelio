@@ -4,7 +4,7 @@ Price Monitor app
 
 # Feature
 
-Monitoring certain product prices
+Monitoring fabelio product price and add comment to each product
 
 # List API
 
@@ -20,7 +20,7 @@ Monitoring certain product prices
 
 ### Environment
 NodeJs <br>
-ExpressJs_ <br>
+ExpressJs <br>
 Mongodb with ODM mongoose <br>
 VueJs 
 
@@ -29,17 +29,17 @@ VueJs
 
 **Backend** <br>
 ```
-$ npm install <br>
-$ npm start <br>
+$ npm install
+$ npm start 
 ```
-Run on localhost:8000<br>
+Run on http://localhost:8000<br>
 
 
 **Frontend**  <br>
 ```
 $ npm run serve
 ```
-Run on localhost:8080 
+Run on http://localhost:8080 /
 
 
 
@@ -49,9 +49,9 @@ Cheerio  <br>
 Node-cron <br>
 Mongoose <br>
 
-##Deployment
+### Deployment
 
-Deployed with Google app engine and google cloud storage<br>
+Deployed with Google app engine and Google cloud storage<br>
 Link : https://testfabelio.gladysefirina.website
 
 
